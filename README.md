@@ -16,3 +16,47 @@ To add this library to your Flutter project, include it in your `pubspec.yaml` f
 ```yaml
 dependencies:
   custom_text_lib: ^1.0.0
+
+
+
+    ### Basic Example
+
+    ```dart
+    SuperText(
+    text: 'Hello, Flutter!',
+    isHeading: true,
+    color: Colors.blue,
+    fontSize: 32,
+    textAlign: TextAlign.center,
+    )
+
+    ### Advanced Example with Gradient and Shadows
+
+    ```dart
+    SuperText(
+    text: 'Custom Styled Text',
+    isTitle: true,
+    color: Colors.black,
+    textGradient: LinearGradient(
+        colors: [Colors.blue, Colors.purple],
+    ),
+    shadows: [
+        Shadow(
+        offset: Offset(2.0, 2.0),
+        color: Colors.grey.withOpacity(0.5),
+        blurRadius: 3.0,
+        ),
+    ],
+    fontSize: 28,
+    onTap: () {
+        print('Text tapped!');
+    },
+    )
+    ### Selectable Text
+
+    ```dart
+    SuperText(
+    text: 'This is selectable text.',
+    isSelectable: true,
+    textAlign: TextAlign.left,
+    )
